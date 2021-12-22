@@ -9,7 +9,7 @@ class News extends Controller{
         $model = model(NewsModel::class);
         $data = [
             'news'=> $model->getNews(),
-            'title' => 'News archive'
+            'title' => 'News archive',
         ];
 
         echo view('templates/header', $data);
@@ -21,9 +21,11 @@ class News extends Controller{
         $model = model(NewsModel::class);
         $data['news'] = $model->getNews($slug);
 
+        
         if (empty($data['news'])) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Can not find any item' . $slug);
         }
+        
 
         $data['title'] = $data['news']['title'];
 
