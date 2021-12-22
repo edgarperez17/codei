@@ -14,7 +14,7 @@
 # ENVIRONMENT
 #--------------------------------------------------------------------
 
-# CI_ENVIRONMENT = production
+# CI_ENVIRONMENT = development
 
 #--------------------------------------------------------------------
 # APP
@@ -41,7 +41,7 @@ database.default.hostname = localhost
 database.default.database = codeigniter
 database.default.username = root
 database.default.password = 
-database.default.DBDriver = mysql
+database.default.DBDriver = MySQLi
 database.default.DBPrefix =
 
 # database.tests.hostname = localhost
